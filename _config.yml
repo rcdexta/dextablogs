@@ -2,11 +2,11 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
-simple_search: http://google.com/search
+url: http://www.dextablogs.com
+title: DEXTA BLOGS
+subtitle: 
+author: RC
+simple_search:
 description:
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
@@ -16,7 +16,7 @@ description:
 date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: /atom.xml
+subscribe_rss: http://feeds.feedburner.com/DextaBlogs
 subscribe_email:
 # RSS feeds can list your email address if you like
 email:
@@ -58,18 +58,18 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.ht
 # ----------------------- #
 
 # Github repositories
-github_user:
+github_user: rcdexta
 github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
-twitter_tweet_count: 4
+twitter_user: rcdexta
+twitter_tweet_count: 0
 twitter_show_replies: false
-twitter_follow_button: true
+twitter_follow_button: false
 twitter_show_follower_count: false
-twitter_tweet_button: true
+twitter_tweet_button: false
 
 # Google +1
 google_plus_one: false
@@ -81,19 +81,19 @@ googleplus_user:
 googleplus_hidden: false
 
 # Pinboard
-pinboard_user:
-pinboard_count: 3
+pinboard_user: dexter
+pinboard_count: 0
 
 # Delicious
-delicious_user:
+delicious_user: rmchandru
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
+disqus_short_name: dextablogs
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-37270500-1
 
 # Facebook Like
 facebook_like: false
