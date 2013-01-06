@@ -20,14 +20,14 @@ That's it. The job will run in the background. Note that using `bg` command late
 
 You can verify active jobs by using the `jobs` command. The `-l` option will include the process ID.
 
-{% codeblock bash shell %}
+{% codeblock bash.sh %}
 $ jobs -l
 1]  + 13701 running    ruby data_cruncher.rb
 {% endcodeblock %}
 
 Note that the number 1 at the beginning is the jobspec which is a number allocated to each job. 13701 is the process ID. The jobspec is useful when there are multiple active jobs. The significance of jobspec is illustrated below.
 
-{% codeblock bash shell %}
+{% codeblock bash.sh %}
 $ jobs -l
 1]  + 13701 running    ruby data_cruncher.rb
 2]  + 14312 running    tail -f data_cruncher.log
@@ -37,7 +37,7 @@ $ fg %1
 
 fg is used to pop out a process to the foreground. fg and bg commands can identify specific jobs with `%<jobspec>`. If you are using bash shell, before you logout, you will have to fire another command `disown -h` to make sure the process is not killed when the terminal session ends. `-h` is used to ignore HUP signal. For more information on HUP, see next section.
 
-{% codeblock bash shell %}
+{% codeblock bash.sh %}
 $ jobs -l
 1]  + 13701 running    ruby data_cruncher.rb
 2]  + 14312 running    tail -f data_cruncher.log
@@ -60,13 +60,13 @@ To give some context, inter-process communication happens in linux using signals
 
 When a user logs out of a terminal session, the HUP signal is used to warn all dependent processes of the logout action. nohup command is used to ignore the HUP signal for a specific process.
 
-{% codeblock bash shell %}
+{% codeblock bash.sh %}
 $ nohup ruby data_cruncher.rb &
 {% endcodeblock %}
 
 This will cause the script to run in the background and will pay no heed to HUP signal, if received. By default, STDOUT and STDERR will be redirected to nohup.out. To explicitly mention the output log file,
 
-{% codeblock bash shell %}
+{% codeblock bash.sh %}
 $ nohup ruby data_cruncher.rb > data_cruncher.log 2>&1 &
 {% endcodeblock %}
 

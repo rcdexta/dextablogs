@@ -95,6 +95,7 @@ header#sidebar h1#title {
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 #octopress_linkback {
@@ -115,7 +116,7 @@ header#sidebar h1#title {
 
 #main {
   border-left: 1px solid #e3e3e3;
-  margin-left: 27%;
+  margin-left: 23%;
   min-height: 900px;
   min-width: 658px;
   position: relative;
@@ -303,11 +304,11 @@ section.comments {
 }
 
 article.post h2, article.post p {
-  max-width: 500px;
+  max-width: 750px;
 }
 
 article.post figure {
-  max-width: 500px;
+  max-width: 600px;
 }
 
 // Anchor
