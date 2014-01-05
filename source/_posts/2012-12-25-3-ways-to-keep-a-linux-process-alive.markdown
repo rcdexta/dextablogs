@@ -18,6 +18,8 @@ Assume that you have a ruby script `data_cruncher.rb` that will run for a long t
 
 That's it. The job will run in the background. Note that using `bg` command later is the same as running the parent process with & at the end like this: `ruby data_cruncher.rb &`.
 
+<!-- more -->
+
 You can verify active jobs by using the `jobs` command. The `-l` option will include the process ID.
 
 {% codeblock bash.sh %}

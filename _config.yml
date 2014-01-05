@@ -16,7 +16,7 @@ description:
 date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: http://feeds.feedburner.com/DextaBlogs
+subscribe_rss: 
 subscribe_email:
 # RSS feeds can list your email address if you like
 email:
@@ -33,6 +33,7 @@ destination: public
 plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories
+category_title_prefix: "Category: "
 markdown: rdiscount
 rdiscount:
   extensions:
@@ -86,12 +87,12 @@ googleplus_user:
 googleplus_hidden: false
 
 # Pinboard
-pinboard_user: dexter
-pinboard_count: 0
+pinboard_user:
+pinboard_count:
 
 # Delicious
-delicious_user: rmchandru
-delicious_count: 3
+delicious_user:
+delicious_count:
 
 # Disqus Comments
 disqus_short_name: dextablogs

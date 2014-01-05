@@ -28,6 +28,8 @@ else
 end
 {% endcodeblock %}
 
+<!-- more -->
+
 If you are not familiar with Ruby fork, a call to `fork` creates a new process. In the above example, the code inside the if block will be executed by the parent process and else block will be executed by the child process (In the child process fork returns nil). A snapshot of how resources will be shared in memory is shown below.
 
 {% img left /images/2013-01-02/shared_pool.png %}

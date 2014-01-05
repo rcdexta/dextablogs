@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "about"
-date: 2012-12-20 03:16
+title: "who am i"
+date: 2014-01-05 08:25
 comments: false
 sharing: false
 footer: false
@@ -18,7 +18,7 @@ You can find me at [twitter](https://twitter.com/rcdexta), [stackoverflow](http:
 
 This blog is powered by the awesome [Octopress](http://octopress.org) engine and inspired by the [Villainy](https://github.com/drunkdev/villainy-octopress-theme) theme.
 
-The image you see to the side is a clever mashup of both dexters I love - the spectacled boy genius ala lovable serial killer. (Courtesy: [Loldwell](http://www.geekologie.com/2010/02/that-is-so-clever-dexterdexter.php)) and the blog name is inspired from them (after endless brainstorming in vain :P)
+The tiny image you see at the top is a clever mashup of both dexters I love - the spectacled boy genius ala lovable serial killer. (Courtesy: [Loldwell](http://www.geekologie.com/2010/02/that-is-so-clever-dexterdexter.php)) and the blog name is inspired from them (after endless brainstorming in vain :P)
 
 Have fun!
 
