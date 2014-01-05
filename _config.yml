@@ -95,7 +95,7 @@ delicious_user:
 delicious_count:
 
 # Disqus Comments
-disqus_short_name: dextablogs
+disqus_short_name:
 disqus_show_comment_count: false
 
 # Google Analytics

@@ -16,7 +16,7 @@ This post aims at answering the following questions:
 
 The fork functionality in Unix systems uses an optimization strategy where memory is shared between the parent and the child processes. The shared memory is maintained till either the parent or one of the children modify their copy of the resource. At that point, a true private copy is created to prevent the changes from being visible to other processes. The primary advantage is that if any of the processes do not make any modifications, no private copy needs to be ever created. This is called Copy-on-write (COW) technique.
 
-{% codeblock fork_process_shared.rb %}
+``` ruby
 shared_array = [1,2,3,4,5]
 
 if fork
@@ -26,7 +26,7 @@ else
   #will be executed by child process
   child_array = [9,10,11]
 end
-{% endcodeblock %}
+```
 
 <!-- more -->
 
@@ -36,7 +36,7 @@ If you are not familiar with Ruby fork, a call to `fork` creates a new process. 
 
 As can be seen above, the _shared_array_ is maintained as a common resource between parent and child processes. When _shared_array_ is modified by the child process, as copy-on-write implies, a private copy is created so that it is not visible to the other process. This is illustrated below.
 
-{% codeblock fork_process_dirty.rb %}
+``` ruby
 shared_array = [1,2,3,4,5]
 
 if fork
@@ -47,7 +47,7 @@ else
   shared_array << 5
   child_array = [9,10,11]
 end
-{% endcodeblock %}
+```
 
 {% img left /images/2013-01-02/private_copy.png %}
 

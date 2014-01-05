@@ -29,13 +29,11 @@ $ jobs -l
 
 Note that the number 1 at the beginning is the jobspec which is a number allocated to each job. 13701 is the process ID. The jobspec is useful when there are multiple active jobs. The significance of jobspec is illustrated below.
 
-{% codeblock bash.sh %}
 $ jobs -l
 1]  + 13701 running    ruby data_cruncher.rb
 2]  + 14312 running    tail -f data_cruncher.log
 $ fg %1
 [1]  + 13701 continued  ruby data_cruncher.rb
-{% endcodeblock %}
 
 fg is used to pop out a process to the foreground. fg and bg commands can identify specific jobs with `%<jobspec>`. If you are using bash shell, before you logout, you will have to fire another command `disown -h` to make sure the process is not killed when the terminal session ends. `-h` is used to ignore HUP signal. For more information on HUP, see next section.
 

@@ -16,6 +16,8 @@ group :development do
   gem 'liquid', '~> 2.3.0'
   gem 'ponyhost'
   gem 'directory_watcher', '1.4.1'
+  gem 'guard'
+  gem 'guard-livereload'
 end
 
 gem 'sinatra', '~> 1.4.2'
