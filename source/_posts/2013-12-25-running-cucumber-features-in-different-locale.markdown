@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Running cucumber features in different locale"
-date: 2013-12-25 10:59:30 +0530
+date: 2014-01-04 10:59:30 +0530
 comments: true
 categories: 
 ---
-We use Selenium + Capybara + Firefox to run all our cucumber features. Recently, we decided to extend the tests to run for different locales and this post is a summary of the challenges we faced and the plausible solutions.
+We use Selenium + Capybara + Firefox to run all our cucumber features. Recently, we decided to extend the tests to run in different locales and this post is a summary of the problems and the plausible solutions.
 
 We had the following objectives in mind:
 
@@ -14,7 +14,7 @@ We had the following objectives in mind:
 
 ## Setup
 
-The first step involves creating a new browser profile and switching the locale (italian in this cse) and passing it on to the Capybara driver.
+The first step involves creating a new browser profile and switching the locale (italian in this case) and passing it on to the Capybara driver.
 
 ``` ruby env.rb
 Capybara.default_driver = :selenium
@@ -35,21 +35,23 @@ The advantage of creating a profile on-the-fly is that the test does not demand 
 
 ## Using translation keys in step definitions
 
-Inside step definition, instead of hard-coding text, use the translation keys directly. This is good practice even when writing tests for a specific locale as your tests are not affected by textual changes.
+Inside step definition, instead of hard-coding text, use the translation keys directly. This is a good practice even when writing tests for a single locale as your tests are not affected by textual changes.
 
 ``` ruby alert_steps.rb
 When /^I click on the stock alert button$/ do |arg|
 	find(button, visible: true, text: t('stock_tab.alert_caption')).click
 end
 ```
-When it's a step with text as parameter, use the key directly in the feature. Yes, this is not so readable as the actual text but using sensible translation keys will take it a step more closer to using actual text.
 
+When it's a step with text as parameter, use the key directly in the feature. Yes, this is not so readable as using the actual text but using sensible translation keys will take it one step closer to using actual text.
 ``` cucumber admin.feature 
 Given I am logged in as administrator
 And I click on t(settings)
 ```
+
+The key passed as parameter can be used with I18n directly.
 ``` ruby admin_steps.rb
-And /I click on t\(:?([^\)]*)\)/ do |caption|
-  find(button, visible: true, text: caption).click
+And /I click on t\(:?([^\)]*)\)/ do |key|
+  find(button, visible: true, text: t(key)).click
 end
 ```
