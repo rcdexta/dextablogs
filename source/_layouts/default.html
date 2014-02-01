@@ -16,7 +16,7 @@
         {% elsif page.is_homepage %}
         <div class="grid__item one-whole">
         {% else %}
-        <div class="grid__item three-quarters lap-one-whole palm-one-whole">
+        <div class="grid__item lap-one-whole palm-one-whole">
         {% endif %}
 
           {{ content | expand_urls: root_url }}
@@ -24,9 +24,9 @@
         </div>
 
         {% unless page.sidebar == false %}
-        <aside id="sidebar" class="grid__item one-quarter lap-one-whole palm-one-whole">
-          {% include site/sidebar.html %}
-        </aside>
+        <!--<aside id="sidebar" class="grid__item one-quarter lap-one-whole palm-one-whole">-->
+          <!--{% include site/sidebar.html %}-->
+        <!--</aside>-->
         {% endunless %}
       </div>
     </div>

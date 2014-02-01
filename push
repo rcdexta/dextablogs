@@ -1,3 +1,4 @@
+rake generate
 cd public
 ponyhost push www.dextablogs.com
 cd -

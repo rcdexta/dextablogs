@@ -55,7 +55,7 @@ $pre-border: darken($base02, 5) !default;
 $pre-color: $base1 !default;
 
 $noise-bg: image-url('noise.png') top left !default;
-$sans: "Helvetica Neue", Arial, sans-serif !default;
+$sans: "Lato", Arial, sans-serif !default;
 $mono: Monaco, Menlo, "Andale Mono", "lucida console", "Courier New", monospace !default;
 .sans { font-family: $sans; }
 .mono { font-family: $mono; }
@@ -314,7 +314,7 @@ figure.code {
   font-weight: normal;
   margin-bottom: 0;
   @include border-radius(5px 5px 0 0);
-  font-family: "Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;
+  font-family: "Lustria", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;
   background: #aaaaaa image-url("code_bg.png") top repeat-x;
   border: 1px solid #565656;
   border-top-color: #cbcbcb;

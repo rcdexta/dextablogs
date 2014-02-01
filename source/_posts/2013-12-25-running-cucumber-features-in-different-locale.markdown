@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Running cucumber features in different locale"
-date: 2014-01-04 10:59:30 +0530
+date: 2013-12-25 10:59:30 +0530
 comments: true
 categories: 
 ---
@@ -29,7 +29,7 @@ end
 
 Capybara.current_session.driver.browser.capabilities.firefox_profile = it_profile
 ```
-The advantage of creating a profile on-the-fly is that the test does not demand every machine to have a pre-configured firefox profile that has the necessary settings.
+The advantage of creating a profile on-the-fly is that the tests do not require every machine to have a pre-configured firefox profile that has the necessary settings.
 
 <!-- more -->
 
@@ -39,7 +39,7 @@ Inside step definition, instead of hard-coding text, use the translation keys di
 
 ``` ruby alert_steps.rb
 When /^I click on the stock alert button$/ do |arg|
-	find(button, visible: true, text: t('stock_tab.alert_caption')).click
+	find(button, text: t('stock_tab.alert_caption')).click
 end
 ```
 
@@ -52,6 +52,6 @@ And I click on t(settings)
 The key passed as parameter can be used with I18n directly.
 ``` ruby admin_steps.rb
 And /I click on t\(:?([^\)]*)\)/ do |key|
-  find(button, visible: true, text: t(key)).click
+  find(button, text: t(key)).click
 end
 ```

@@ -2,7 +2,7 @@
     $MAIN
 \*------------------------------------*/
 html{
-    font:#{($base-font-size/16px)*0.9em}/#{$line-height-ratio} $base-font-family;
+    font:#{($base-font-size/16px)*1.0em}/#{$line-height-ratio} $base-font-family;
     overflow-y:scroll;
     min-height:100%;
 }
