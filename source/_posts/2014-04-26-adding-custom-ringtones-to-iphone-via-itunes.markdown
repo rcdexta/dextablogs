@@ -15,6 +15,8 @@ So my gig:
 * iTunes 11.1.5 running on Mavericks
 * iPhone 5
 
+<!-- more -->
+
 ## Steps to convert existing song in album to ringtone
 
 * The first step is to enable Tones section as part of the Library drop-down. Go to preferences (<kbd>CMD</kbd>+<kbd>,</kbd>) and check on Show Tones. For some reason, this section is not visible by default.
