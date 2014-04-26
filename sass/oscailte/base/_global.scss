@@ -21,6 +21,7 @@ a {
 }
 
 .title.indent {
+  font-family: 'Montserrat', 'HELVETICA NEUE', 'Arial';
   @media only screen and (max-width: $palm-end){
     &::before {
       display: none;

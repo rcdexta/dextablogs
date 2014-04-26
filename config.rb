@@ -14,6 +14,7 @@ css_dir = "public/stylesheets"
 sass_dir = "sass"
 images_dir = "source/images"
 fonts_dir = "source/fonts"
+Encoding.default_external = "utf-8"
 
 line_comments = false
 output_style = :compressed
