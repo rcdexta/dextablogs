@@ -33,6 +33,8 @@ A global ajax handler on the javascript side will intercept all ajax calls acros
     });
 ```
 
+<!-- more -->
+
 Now, let's see this put to use in the most common scenario of validating the user session. If an invalid session is encountered and the request is xhr (meaning ajax), `ajax_redirect_to` can be used to redirect the user to login page else the conventional `redirect_to` helper should work.
 
 ``` ruby application_controller.rb
@@ -50,3 +52,5 @@ end
 ```
 
 > Interestingly, `redirect_to url, status: 302` is not the same as using `head 302, x_ajax_redirect_url: url` because the latter does not set the location header and that does the trick! 
+
+Also, check out this [sample rails application](https://github.com/rcdexta/ajax_redirect) to play with. It has all the necessary code to test the flow.
