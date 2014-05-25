@@ -16,3 +16,14 @@ body > header {
     font-weight: normal;
   }
 }
+
+
+.sociallink img, .sociallink svg {
+
+  height: 2.75em;
+  width: 2.75em;
+
+  a {
+    text-decoration: none;
+  }
+}
